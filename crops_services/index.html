@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmHand</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" href="img/homeIcon.webp" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <img src="img/homeIcon.webp" alt="icon"><br>
+                <span class="highlight">FarmHand</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Sevices</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="carousel">
+            <!-- Grouping all radio buttons at the beginning -->
+            <input type="radio" id="i1" name="images" checked/>
+            <input type="radio" id="i2" name="images"/>
+            <input type="radio" id="i3" name="images"/>
+    
+            <!-- Then, list all the slides -->
+            <div class="slide" style="background-image: url('img/showcase1.jpg');">
+                <div class="container">
+                    <h1>Helping Farmers is Our Moto</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui repellat, nihil nobis fugit enim voluptates?</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('img/showcase2.jpg');">
+                <div class="container">
+                    <h1>Helping Farmers is Our Moto</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui repellat, nihil nobis fugit enim voluptates?</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('img/showcase3.jpg');">
+                <div class="container">
+                    <h1>Helping Farmers is Our Moto</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui repellat, nihil nobis fugit enim voluptates?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe to Our Services</h1>
+
+            <form action="#" class="my-form" class="my-form" method="post">
+                <input type="email" placeholder="Enter Email">
+                <button class="btn_1" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="boxes">
+
+        <div class="container">
+            <div class="box">
+                <img src="img/tract1.jpg" alt="tractor">
+                <h1>Utility Tractor</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam asperiores ducimus dolorum!</p>
+            </div>
+    
+            <div class="box">
+                <img src="img/tract2.jpg" alt="tractor">
+                <h1>Row Crop Tractor</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam asperiores ducimus dolorum!</p>
+            </div>
+    
+            <div class="box">
+                <img src="img/paddy1.jpg" alt="tractor">
+                <h1>Orchid Type</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam asperiores ducimus dolorum!</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>Corn Design, Copyright &copy; 2023</p>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        function changeSlide() {
+    let radios = document.querySelectorAll('.carousel input[type="radio"]');
+    let currentIndex = -1;
+
+    // Find which radio button is currently checked
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            currentIndex = i;
+            break;
+        }
+    }
+
+    // Check the next radio button
+    if (currentIndex !== -1) {
+        let nextIndex = (currentIndex + 1) % radios.length;
+        radios[nextIndex].checked = true;
+    }
+}
+
+// Call the function every 3 seconds (3000 milliseconds)
+setInterval(changeSlide, 3000);
+
+    </script>
+</body>
+</html>
